@@ -1,17 +1,11 @@
 <div style="margin-left: 10rem">
-    <h1>Welcome to Laravel Live Wire Series !!!</h1>
+    <h1>Welcome to Laravel Live Wire Series Episode 3</h1>
+    <h2>Methodes or function call, Click events,Event and Target, mouse enter, keydown ,Submit Form & Set</h2>
     <h1>Name :{{$name}}</h1>
     <input type="text" wire:model="name">
-    <h1>Age : {{$age}}</h1>
-    <input type="number" wire:model="age">
-    <h1>Test : {{implode(', ',$test)}}</h1>
-    <select wire:model="test" multiple>
-        <option>Blood</option>
-        <option>Urine</option>
-        <option>Stool</option>
-    </select>
-    <h1>Status : @if($status) Completed @else Testing @endif</h1>
-    <input type="checkbox" wire:model="status">
+    <form action="#" wire:submit.prevent="$set('name', 'Toney Stark')">
+        <button>Reset</button>
+    </form>
 </div>
 <style>
     input {

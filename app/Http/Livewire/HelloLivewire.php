@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class HelloLivewire extends Component
 {
-    public $name, $age, $test = [], $status = false;
+    public $name = "Robert";
     public function render()
     {
         return view('livewire.hello-livewire');
