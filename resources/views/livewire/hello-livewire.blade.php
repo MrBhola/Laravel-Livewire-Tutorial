@@ -6,7 +6,31 @@
     <form action="#" wire:submit.prevent="$set('name', 'Toney Stark')">
         <button>Reset</button>
     </form>
+    <select name="" id="">
+
+        <option wire:click="new('hello')">new</option>
+    </select>
+
+
+
+    <div class="w-2/5 p-1 text-center " wire:click="$set('isOpenModal', 'true')">
+        <label class="labl">
+            <input type="radio" name="radioname" value="one_value" />
+            <div class="rounded-lg py-2 px-3">{{trans('strings.change')}}</div>
+        </label>
+    </div>
+    @if($isOpenModal)
+    hello
+    <div class="d-flex justify-content-center align-items-center">
+        <button wire:click="hello">
+            <div class="btn btn-danger">
+                <span class="text-base text-white-400 hover:text-white-300">{{trans('strings.close')}}</span>
+            </div>
+        </button>
+    </div>
 </div>
+@endif
+
 <style>
     input {
         height: 30px;
